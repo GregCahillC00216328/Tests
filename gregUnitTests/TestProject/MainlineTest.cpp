@@ -16,8 +16,8 @@ int main()
 	int maxSize = 80;
 	
 	assert(p.arraySizeDet(size)==6);
-	int sizeCheckResult = p.sizeChecker(arr, size, maxSize);
-	assert(sizeCheckResult<maxSize && sizeCheckResult>1);
+	bool sizeCheckResult = p.sizeChecker(arr, size, maxSize);
+	assert(sizeCheckResult==false);
 	assert(p.repeatingNum(arr, size)==false);
 	cin.get();
 }

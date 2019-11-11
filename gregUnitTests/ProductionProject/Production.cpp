@@ -12,15 +12,15 @@ int Production::arraySizeDet(int t_size)
 }
 
 
-int Production::sizeChecker(int arr[],int t_arrSize, int t_compareVal) {
+bool Production::sizeChecker(int arr[],int t_arrSize, int t_compareVal) {
 	//loops through the array and checks if the num is bigger thans the compare val, or less than one
 	for (int i = 0; i < t_arrSize; i++) {
 		if (arr[i]<1 || arr[i]>t_compareVal)
 		{
-			return arr[i];
+			return true;
 		}
 	}
-	return 2;
+	return false;
 }
 
 bool Production::repeatingNum(int arr[], int t_arrSize)
@@ -31,7 +31,7 @@ bool Production::repeatingNum(int arr[], int t_arrSize)
 	for (int i = 0; i < t_arrSize; i++) {
 		for (int j=0;j<t_arrSize;j++)
 		{
-			if(arr[j]==arr[i])
+			if(arr[j]==arr[i] && j!=i)
 			{
 				return true;
 			}
